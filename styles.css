@@ -7,7 +7,7 @@
 }
 
 :root {
-  --white : rgb(242, 244, 246);
+  --white: rgb(242, 244, 246);
 }
 
 body {
@@ -17,13 +17,26 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Amazon Ember, Amazon Arabic Ember, Arial, sans-serif !important;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
 }
 
 .container {
-  width: 301px;
-  border: 3px solid #00a8e1;
+  width: 300px;
+
   border-radius: 3px;
   z-index: 1;
+  position: relative;
+  cursor: pointer;
+
+  height: 169.4px;
+  transition: transform 0.4s, border 0.15s;
+}
+
+.container:hover {
+  border: 1.42px solid #00a8e1;
+  transform: scale(1.05);
+  height: 349px;
 }
 
 .filmImage {
@@ -32,12 +45,15 @@ body {
 }
 
 .filmImage img:nth-of-type(1) {
-  content="";
   position: absolute;
+  top: 0px;
+  left: 0px;
   width: 30px;
   height: auto;
-  transform: translate(-3px, -3px);
+}
 
+.container:hover .filmImage img:nth-of-type(1) {
+  transform: translate(-1.4px, -1.4px);
 }
 
 .filmImage img:nth-of-type(2) {
@@ -48,34 +64,42 @@ body {
   z-index: 1;
 }
 
-
 .content {
-  border-top: 2px b;
-  background: #0f171e;
-  opacity: 0.9;
-  height: 180px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(15, 23, 30, 0.9) 91%,
+    transparent 100%
+  );
+  opacity: 1;
+  height: 205px;
   padding: 0px 10px 20px 20px;
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 1px 1px;
+  display: none;
+}
+
+.container:hover .content {
+  display: flex;
 }
 
 .btns {
-  height: 20px;
+  height: 45px;
   display: flex;
   align-items: center;
 }
 
 .btns ion-icon:nth-of-type(1) {
-  background-color:#000;
+  background-color: #000;
   border: 2px solid #ffe;
   border-radius: 50%;
   padding: 5px 5px 5px 7px;
   font-size: 20px;
-  transform: translateX();
   color: #ffe;
   transition: all 0.2s;
-  
 }
 
 .btns ion-icon:nth-of-type(1):hover {
@@ -120,7 +144,7 @@ body {
 }
 
 .included {
-  margin-top: 15px;
+  margin-top: 10px;
   color: #00a8e1;
   font-size: 15px;
   font-weight: 700;
@@ -131,7 +155,6 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: var(--white);
-  
 }
 
 .filmDesc {
@@ -158,6 +181,5 @@ span ion-icon {
 span p:nth-of-type(3) {
   border: 1px solid rgb(106, 125, 143);
   padding: 0px 2px;
+  font-size: 13px;
 }
-
-
