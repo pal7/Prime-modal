@@ -1,0 +1,163 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white : rgb(242, 244, 246);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Amazon Ember, Amazon Arabic Ember, Arial, sans-serif !important;
+}
+
+.container {
+  width: 301px;
+  border: 3px solid #00a8e1;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.filmImage {
+  width: 100%;
+  height: 163px;
+}
+
+.filmImage img:nth-of-type(1) {
+  content="";
+  position: absolute;
+  width: 30px;
+  height: auto;
+  transform: translate(-3px, -3px);
+
+}
+
+.filmImage img:nth-of-type(2) {
+  margin: 0;
+  width: 100%;
+  border-radius: 1px 1px 0px 0px;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.content {
+  border-top: 2px b;
+  background: #0f171e;
+  opacity: 0.9;
+  height: 180px;
+  padding: 0px 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 1px 1px;
+}
+
+.btns {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btns ion-icon:nth-of-type(1) {
+  background-color:#000;
+  border: 2px solid #ffe;
+  border-radius: 50%;
+  padding: 5px 5px 5px 7px;
+  font-size: 20px;
+  transform: translateX();
+  color: #ffe;
+  transition: all 0.2s;
+  
+}
+
+.btns ion-icon:nth-of-type(1):hover {
+  background-color: #00a8e1;
+  border: 2px solid transparent;
+  z-index: 2;
+}
+.btns a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #ffe;
+  font-size: 15px;
+  flex-grow: 1;
+  border-bottom: 3px solid #00a8e1;
+  padding-bottom: 3px;
+  margin: 5px 50px 2px 10px;
+  font-weight: 700;
+}
+
+.btns ion-icon:nth-of-type(2) {
+  font-size: 25px;
+  color: #ffe;
+  margin: 4px 10px 0px 0px;
+}
+
+.btns ion-icon:nth-of-type(3) {
+  font-size: 28px;
+  color: #ffe;
+  margin: 15px 15px 10px 0px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: #ffe;
+}
+
+.details {
+  height: 25%;
+  display: flex;
+}
+
+.included {
+  margin-top: 15px;
+  color: #00a8e1;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.filmTitle {
+  margin-top: 11px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  
+}
+
+.filmDesc {
+  margin-top: 5px;
+  font-size: 13px;
+  color: var(--white);
+  padding-right: 10px;
+}
+
+span {
+  margin-top: 8px;
+  margin-right: 95px;
+  display: flex;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(106, 125, 143);
+}
+span ion-icon {
+  font-size: 22px;
+}
+
+span p:nth-of-type(3) {
+  border: 1px solid rgb(106, 125, 143);
+  padding: 0px 2px;
+}
+
+
